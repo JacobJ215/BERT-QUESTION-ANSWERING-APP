@@ -7,7 +7,32 @@
 <body>
     <h1>Question Answering App with BERT</h1>
     <form method="POST" action="/">
-        <label for="passage">Enter the passage (text)</label>
+        <label for="passage">Enter the passage</label>
+        <textarea name="passage" id="passage" rows="4" placeholder="Enter the passage...">{{ request.form.get("passage", "") }}</textarea>
+        <label for="question">Enter your question</label>
+        <input type="text" name="question" id="question" placeholder="Enter your question..." value="{{ request.form.get('question', '') }}"
+        <label for="chunk-size">Select Chunk Size:</label>
+        <select name="chunk-size" id="chunk-size">
+            <option value="200">200</option>
+            <option value="400" selected>400</option>
+            <option value="600">600</option>
+        </select>
+        <input type="submit" value="Get Answer">
     </form>
+    {% if answer %}
+    <div class="answer">
+        <h2>Answer:</h2>
+        <p>{{ answer }}</p>
+        <h2>Highlighted Chunks:</h2>
+        {% for chunk in highlighted_chunks %}
+        <div class="highlighted-chunk">
+            {{ chunk }} [Answer found in this chunk]
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
 </body>
 </html>
