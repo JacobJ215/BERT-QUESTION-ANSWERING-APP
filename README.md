@@ -31,15 +31,15 @@ For this project, we're using a specific variant of the BERT model known as "ber
 
 2. **Set Up the Environment:** Create a virtual environment (optional but recommended) and install the required packages listed in the `requirements.txt` file:
    
-   ```bash
+   ```
    pip install -r requirements.txt
    ```
 
 3. Run the App: xecute the following command to run the Flask app:xecute the following command to run the Flask app:
 
-```bash
-python app.py
-```
+    ```bash
+    python app.py
+    ```
 
 
 4. Access the App: Open a web browser and navigate to http://127.0.0.1:5000/ to access the app.
