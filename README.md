@@ -5,9 +5,12 @@ Welcome to the Question Answering App with BERT and Flask project! This project 
 
 ![](screenshots/BERT-QnA.gif)
 
+
 ## Overview
 
 Have you ever wanted to quickly find answers to specific questions within a large body of text? This app is designed to address that need. Simply input a passage of text and a question, and the app will provide you with a concise answer, highlighting the relevant sections of the passage.
+
+[GitHub](https://github.com/JacobJ215/BERT-QUESTION-ANSWERING-APP)
 
 ## BERT: Background and Model
 
